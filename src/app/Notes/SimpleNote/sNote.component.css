@@ -1,0 +1,58 @@
+:root {
+  --main-bg-color: brown;
+  --background-cards: rgb(236, 233, 217);
+  --red-burger: rgb(224, 22, 22);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.cSimpleNote{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(241, 241, 151);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.cUpperPartNote{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cContentePartNote{
+  width: 90%;
+  height: 60%;
+  margin: 5%;
+}
+
+.cLowerPartNOte{
+  margin-bottom: 5%;
+}
+
+.cFontTitleNote{
+  font-size: larger;
+  font-family: 'Courier New', Courier, monospace;
+}
+.cFontContentNote{
+
+}
+
+.cListButtonsNote{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.cButtonOnNote{
+  padding: 0% 5% 0% 5%;
+}
