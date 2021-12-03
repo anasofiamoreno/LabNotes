@@ -1,1 +1,23 @@
-<p>log-in works!</p>
+
+<div class='cPageLogin'>
+
+    <form class= 'cFormLogin'>
+        <h2>Login</h2>
+         <div class='cdivInputs'>
+            <p class="cText">User / Email</p>
+            <input type="text" name='email' placeholder="user@labnotes.com" [(ngModel)]="email">
+        </div>
+        <div class='cdivInputs'>
+            <p class="cText">Password</p>
+            <input type="text" name='password' placeholder="Not 123456" [(ngModel)]="password" >
+        </div>
+
+        <div class="divBtn"><button (click)="fnMakeLogin( $event )">OK</button></div>
+        
+        <div class="cdivlogito">
+           <img src='assets/img/logo.png' alt=""> 
+        </div>
+        
+    </form>
+
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "labnotes-e80b9": {
+      "hosting": {
+        "LabNotes": [
+          "labnotes-e80b9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "labnotes-e80b9"
+  }
+}
