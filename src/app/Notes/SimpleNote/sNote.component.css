@@ -42,9 +42,7 @@
   font-size: larger;
   font-family: 'Courier New', Courier, monospace;
 }
-.cFontContentNote{
 
-}
 
 .cListButtonsNote{
   display: flex;
@@ -55,4 +53,8 @@
 
 .cButtonOnNote{
   padding: 0% 5% 0% 5%;
+}
+
+img{
+  width: 30px;
 }

@@ -1,0 +1,75 @@
+.cPageLogin{
+    display: flex;
+    height: 100%;
+    background-color: #C4C4C4;
+    justify-content: center;
+    align-items: center;
+}
+
+.cFormLogin{
+
+    height: 60%;
+    width: 50%;
+    background-color: #FBCFCF;
+    border: 5px solid #000000;
+    border-radius: 15px;
+    
+}
+
+.cFormLogin h2{
+    position: relative;   
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 5%;
+}
+
+.divBtn{
+    text-align: center;
+
+}
+
+.cdivlogito{
+    text-align: right;
+}
+
+.cdivInputs{
+    margin: auto;
+    width: 80%;
+}
+
+.cText{
+font-size: 1.2em;
+}
+
+
+
+.cFormLogin input{  
+    width: 100%;
+    height: 10%;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 120%;
+    margin-bottom: 10%;
+}
+
+.cFormLogin button{
+    background: #6C6C6C;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 30%;
+    height: 10%;
+    margin: auto;
+    text-align: center;
+}
+
+img{
+  margin-right: 15px;
+}
+

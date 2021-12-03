@@ -1,1 +1,26 @@
-<p>page works!</p>
+<div class="cDivPage">
+  <header class="cHeaderStyle">
+    <section class="cHeaderStyleSection">
+      <div>
+        <button class="cBtnTransparenci">
+        <img src="/assets/img/logo.png" alt="">
+        </button>
+      </div>
+      <div>
+        <button class="cBtnTransparenci">
+          <img src='/assets/img/logOut.png' alt="" (click)="fnMakeLogout()" *ngIf="userState.log">
+        </button>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="cScreenNotes" *ngIf="userState.log"></section>
+    <div class="cScreenNote" *ngIf="userState.log">
+      <app-snote></app-snote>
+    </div>
+    <app-log-in *ngIf="!userState.log" (logIn)="fnReenviarLogin( $event )"></app-log-in>
+  </main>
+  <footer>
+
+  </footer>
+</div>

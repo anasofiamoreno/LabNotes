@@ -1,3 +1,8 @@
-<h1>Prueba de Nota</h1>
+<router-outlet></router-outlet>
+<app-page 
+    *ngIf="userState.log !== null" 
+    [userState]='userState' 
+    (logOut)='fnUpdateLogOut()'
+    (reenviarLogin)='fnUpdateLogIn( $event )'
+></app-page>
 
-<app-snote></app-snote>
