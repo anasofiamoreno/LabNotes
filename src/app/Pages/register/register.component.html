@@ -1,0 +1,31 @@
+
+<app-upper-bar></app-upper-bar>
+
+<div class='cPageLogin'>
+
+    
+
+    <form class= 'cFormLogin'>
+        <h2>Register</h2>
+         <div class='cdivInputs'>
+            <p class="cText">Email</p>
+            <input type="email" name='email' placeholder="user@labnotes.com" [(ngModel)]="email">
+        </div>
+        <div class='cdivInputs'>
+            <p class="cText">Set Password</p>
+            <input type="password" name='password' placeholder="Not 123456" [(ngModel)]="passwordSet" >
+        </div>
+        <div class='cdivInputs'>
+            <p class="cText">Confirm Password</p>
+            <input type="password" name='password' placeholder="Not 123456" [(ngModel)]="passwordConfirm" >
+        </div>
+
+        <div class="divBtn"><button (click)="fnMakeRegister()">Register</button></div>
+        
+        <div class="cdivlogito">
+           <img src='assets/img/logo.png' alt=""> 
+        </div>
+        
+    </form>
+
+</div>

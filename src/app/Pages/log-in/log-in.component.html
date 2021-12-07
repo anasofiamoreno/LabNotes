@@ -1,4 +1,6 @@
 
+<app-upper-bar></app-upper-bar>
+
 <div class='cPageLogin'>
 
     <form class= 'cFormLogin'>
@@ -12,7 +14,10 @@
             <input type="text" name='password' placeholder="Not 123456" [(ngModel)]="password" >
         </div>
 
-        <div class="divBtn"><button (click)="fnMakeLogin( $event )">OK</button></div>
+        <div class="divBtn">
+            <button (click)="fnMakeLogin( $event )">OK</button>
+            <button (click)="fnGoRegister()">Register</button>
+        </div>
         
         <div class="cdivlogito">
            <img src='assets/img/logo.png' alt=""> 

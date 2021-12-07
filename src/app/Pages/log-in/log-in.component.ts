@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { signInWithEmailAndPassword, Auth } from '@angular/fire/auth';
 import { state } from 'src/app/interfaces/interfaces';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-log-in',
@@ -13,14 +14,12 @@ export class LogInComponent implements OnInit {
   email: string = ""
   password: string = ""
 
-  @Output() logIn: EventEmitter<state> = new EventEmitter() 
-
   userState: state = {
     log: null,
     email: ''
   }
 
-  constructor(private auth: Auth) { }
+  constructor(private auth: Auth, private dataService: DataService) {}
 
   ngOnInit(): void {
   }
@@ -30,10 +29,16 @@ export class LogInComponent implements OnInit {
     await this.emailLogin(this.email, this.password)
     .then(data => {
       this.userState = {log: true, email:data.user.email }
-      this.logIn.emit( this.userState)
+      //this.logIn.emit( this.userState)
+      this.dataService.fnUpdateLogIn(this.userState)
+      window.location.pathname = '/notes'
     })
     .catch(()=> {this.email = 'Correo o Contraseña Equivocada'})
   
+  }
+
+  fnGoRegister(){
+    window.location.pathname = '/register'
   }
 
   async emailLogin(email: string, password: string)
