@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { SnoteComponent } from "./SimpleNote/sNote.component";
 import { TemplateListNoteComponent } from './template-list-note/template-list-note.component';
 
@@ -13,7 +14,8 @@ import { TemplateListNoteComponent } from './template-list-note/template-list-no
         SnoteComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        FormsModule
     ]
 
 })

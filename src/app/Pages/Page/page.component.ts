@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { state } from 'src/app/interfaces/interfaces';
+import { Note, state } from 'src/app/interfaces/interfaces';
 
 import {
   Auth,
@@ -9,6 +9,25 @@ import {
   user,
   signInWithEmailAndPassword,
 } from '@angular/fire/auth';
+import { DataService } from 'src/app/services/data.service';
+
+import {
+  collection,
+  doc,
+  docData,
+  DocumentReference,
+  CollectionReference,
+  Firestore,
+  onSnapshot,
+  query,
+  where,
+  Unsubscribe,
+  Query,
+  DocumentData,
+  collectionData,
+  collectionChanges,
+  docSnapshots,
+} from '@angular/fire/firestore';
 
 
 @Component({
@@ -18,35 +37,43 @@ import {
 })
 export class PageComponent implements OnInit {
 
-  @Output() logOut: EventEmitter<state> = new EventEmitter()
-  @Output() reenviarLogin: EventEmitter<state> = new EventEmitter()
-  
-  
-  @Input() userState: state ={
-    log: false,
-    email: ""
+  get userState() {
+    return this.dataService.userState
   }
 
+  notes: Note[] = []
 
-  constructor(private auth: Auth) { }
 
+  constructor(private dataService: DataService, private afs: Firestore) {
   
+   }
 
   ngOnInit(): void {
-  }
 
-  fnMakeLogout(){
-    this.emailLogout()
-    this.logOut.emit( this.userState )
-  }
+    onSnapshot(
+      doc(this.afs, "users", "JJUMyiLGrwhHldfAA2dwl0uGjKi1"), 
+      (doc: any) => {
+        Object.entries(doc.data()).forEach( (note: any) => {
+
+          const tempNote: Note= {title: note[1].title, content: note[1].content, date: note[0], edited: note[1]?.edited}
+          this.notes.push(tempNote)
+        })
+        this.notes.sort( (a:any, b:any): any => {
+          if(a.date > b.date){
+            return -1
+          }
+          if (a.date < b.date) {
+            return 1;
+          }
+
+          
+        })
+
+        console.log(this.notes)
+      });
   
-  async emailLogout()
-: Promise<any> {
-  return await signOut(this.auth,);
-}
+  }
 
-fnReenviarLogin( event: state ){
-  this.reenviarLogin.emit( event )
-}
-
+ 
+   
 }
