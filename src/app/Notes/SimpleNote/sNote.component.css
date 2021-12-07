@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   background-color: rgb(241, 241, 151);
   border-style: solid;
   border-width: 2px;
@@ -28,10 +28,22 @@
   margin-top: 5px;
 }
 
+.cUpperPartNote input{
+background: none;
+border: none;
+}
+
 .cContentePartNote{
   width: 90%;
   height: 60%;
   margin: 5%;
+}
+
+.cContentePartNote textarea{
+  width: 100%;
+  height: 100%;
+  background: none;
+border: none;
 }
 
 .cLowerPartNOte{

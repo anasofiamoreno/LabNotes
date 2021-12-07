@@ -1,0 +1,30 @@
+.cHeaderStyle{
+   
+    position: absolute;
+    display: block;
+    top: 0%;
+    background-color:#FBCFCF;
+    width: 100%;
+    height: 10%;
+}
+
+.cHeaderStyleSection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cBtnTransparenci{
+    background-color: Transparent;
+    border: none;
+
+}
+
+.cBtnTransparenci img{
+    height: 50px;
+    margin: 0px 15px 0px 15px;
+}

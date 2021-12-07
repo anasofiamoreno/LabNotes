@@ -1,24 +1,22 @@
+<app-upper-bar></app-upper-bar>
+
 <div class="cDivPage">
-  <header class="cHeaderStyle">
-    <section class="cHeaderStyleSection">
-      <div>
-        <button class="cBtnTransparenci">
-        <img src="/assets/img/logo.png" alt="">
-        </button>
-      </div>
-      <div>
-        <button class="cBtnTransparenci">
-          <img src='/assets/img/logOut.png' alt="" (click)="fnMakeLogout()" *ngIf="userState.log">
-        </button>
-      </div>
-    </section>
-  </header>
+  
   <main>
-    <section class="cScreenNotes" *ngIf="userState.log"></section>
-    <div class="cScreenNote" *ngIf="userState.log">
-      <app-snote></app-snote>
-    </div>
-    <app-log-in *ngIf="!userState.log" (logIn)="fnReenviarLogin( $event )"></app-log-in>
+    <section class="cScreenNotes" *ngIf="userState.log">
+     <app-template-list-notes 
+     *ngFor="let note of notes" 
+     [title]='note.title'
+     [content]='note.content'
+     [status]='note.edited == undefined ? "Created" : "Edited"'
+     [date]='note.date'>
+    </app-template-list-notes>
+    </section>
+    <section class="cScreenNote" *ngIf="userState.log">
+      <app-note></app-note>
+    </section>
+    
+    <!--<app-log-in *ngIf="!userState.log" (logIn)="fnReenviarLogin( $event )"></app-log-in>-->
   </main>
   <footer>
 

@@ -1,13 +1,13 @@
 <div class="cSimpleNote">
   <div class="cUpperPartNote">
-    <p class="cFontTitleNote">{{name}}</p>  
+    <input type="text" name="title" placeholder="Titulo de nota" [(ngModel)]="title">  
   </div>
   <div class="cContentePartNote">
-    <p class="cFontContentNote">{{content}}</p>
+    <textarea type="text" name='content' placeholder="Escribe aqui tu nota" [(ngModel)]="content"></textarea>
   </div>
   <div class="cLowerPartNOte">
     <li class="cListButtonsNote">
-      <img type='button'src="/assets/img/saveNotethird.png" alt="">
+      <img (click)="fnMakeNewNote()" type='button'src="/assets/img/saveNotethird.png" alt="">
       <img type='button'src="/assets/img/editNotethird.png" alt="">
       <img type='button' src='/assets/img/deleteNotethird.png' alt=''>
     </li>

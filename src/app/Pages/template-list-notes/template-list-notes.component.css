@@ -1,0 +1,20 @@
+.cTemplateLN{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 90%;
+    border-style: solid;
+    ;
+    
+}
+
+.cContent{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.cDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
