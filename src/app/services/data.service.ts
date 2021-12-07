@@ -9,7 +9,7 @@ import {
 import { Observable, take } from 'rxjs';
 
 
-import { state } from '../interfaces/interfaces';
+import { Note, state } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,8 @@ export class DataService implements OnInit{
     email: "",
     id: ''
   }
+
+  notes: Note[] = []
 
   constructor() {
  
@@ -43,4 +45,11 @@ export class DataService implements OnInit{
     this.userState = {log: user.log, email: user.email, id: user.id}  
   
   }
+
+
+
+  fnGetUserStatus(){
+    return this.userState
+  }
+
 }

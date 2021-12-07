@@ -33,17 +33,21 @@ export class SnoteComponent {
 
   async fnMakeNewNote(){
 
+    if(this.title && this.content){
     this.idUser = typeof this.userState.id == 'string' ? this.userState.id : 'noData'
     const date: string = Date.now().toString()
     //const dateNote: string = `${date.getDay().toString()}/${date.getMonth().toString()}/${date.getFullYear().toString()} ${date.getHours().toString()}:${date.getMinutes().toString()}:${date.getSeconds().toString()}` 
     
-
     await updateDoc(doc(this.db, "users", this.idUser), {
       [date]: {
         title: this.title,
         content: this.content,
       }
     });
+
+    this.title = ''
+    this.content =''
+  }
   }
 
 }

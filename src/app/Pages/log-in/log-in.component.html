@@ -11,8 +11,10 @@
         </div>
         <div class='cdivInputs'>
             <p class="cText">Password</p>
-            <input type="text" name='password' placeholder="Not 123456" [(ngModel)]="password" >
+            <input type="text" name='password' placeholder="Minimum 8 letters" [(ngModel)]="password" >
         </div>
+
+        <div><p class='cAlert'>{{alert}}</p></div>
 
         <div class="divBtn">
             <button (click)="fnMakeLogin( $event )">OK</button>

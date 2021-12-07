@@ -27,6 +27,10 @@ export class UpperBarComponent implements OnInit {
     window.location.pathname = '/'
   }
 
+  fnGoHome(){
+    window.location.pathname = '/'
+  }
+
   async emailLogout()
   : Promise<any> {
     return await signOut(this.auth,);

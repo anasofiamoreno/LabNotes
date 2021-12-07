@@ -17,11 +17,15 @@
 
 
 .cScreenNote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     left: 30%;
     width: 70%;
     height: 100%;
     background-color: #C4C4C4;
+    
 }
 
 .cScreenNotes{
@@ -29,6 +33,7 @@
     width: 30%;
     height: 100%;
     background: #6C6C6C;
+    overflow-y: scroll;
 }
 
 main{
