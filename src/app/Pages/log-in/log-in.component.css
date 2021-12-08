@@ -30,10 +30,19 @@
 
 .divBtn{
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 
 }
 
+.divBtn button{
+    padding: 5px;
+    font-size: medium;
+}
+
 .cdivlogito{
+    margin-top: 20px;
+    margin-bottom: 5px;
     text-align: right;
 }
 
@@ -74,3 +83,11 @@ img{
   margin-right: 15px;
 }
 
+.cAlert{
+    color: Red;
+    font-weight: bold;
+    font-size: large;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
