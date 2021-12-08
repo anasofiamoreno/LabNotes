@@ -1,16 +1,23 @@
 .cTemplateLN{
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    width: 90%;
-    border-style: solid;
-    ;
-    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: solid;
+    background-color: #8d8c8c;
+    overflow-y: scroll;
+    scrollbar-track-color: blue;
+}
+
+h3{
+    margin-left: 10px;
 }
 
 .cContent{
     font-style: italic;
     text-decoration: underline;
+    margin-left: 5px;
 }
 
 .cDate{

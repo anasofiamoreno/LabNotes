@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   email: string = ""
   passwordSet: string = ""
   passwordConfirm: string = ""
+  alert: string = ""
 
   //@Output() logIn: EventEmitter<state> = new EventEmitter() 
 
@@ -26,16 +27,30 @@ export class RegisterComponent implements OnInit {
   }
 
   fnMakeRegister(){
-    console.log(this.email, this.passwordSet, this.passwordConfirm)
-    if(this.passwordSet === this.passwordConfirm){
+  
+    if(!this.email){
+      this.alert = "Empty Email"
+      return
+    }
+    if(!this.passwordSet){
+      this.alert = "Empty Password";
+      return 
+    }
+    if(this.passwordSet.length <= 7){
+      this.alert = "Short Password";
+      return 
+    }
+    if(this.passwordSet != this.passwordConfirm){
+      this.alert = "Passwords dont match";
+      return 
+    }
+    
       this.emailSignUp(this.email,this.passwordSet)
       .then(data => {
-        console.log(data)
+        window.location.pathname = '/notes'
       })
-      .catch( error => console.log(error))
-    }else{
-      console.log('Algo diferente')
-    }
+      .catch( error => this.alert = error)
+  
   }
 
   async emailSignUp(email: string, password: string): Promise<void> {

@@ -13,12 +13,14 @@
         </div>
         <div class='cdivInputs'>
             <p class="cText">Set Password</p>
-            <input type="password" name='password' placeholder="Not 123456" [(ngModel)]="passwordSet" >
+            <input type="password" name='password' placeholder="Minimun 8 letters" [(ngModel)]="passwordSet" >
         </div>
         <div class='cdivInputs'>
             <p class="cText">Confirm Password</p>
-            <input type="password" name='password' placeholder="Not 123456" [(ngModel)]="passwordConfirm" >
+            <input type="password" name='password' placeholder="Minimun 8 letters" [(ngModel)]="passwordConfirm" >
         </div>
+
+        <div><p class='cAlert'>{{alert}}</p></div>
 
         <div class="divBtn"><button (click)="fnMakeRegister()">Register</button></div>
         

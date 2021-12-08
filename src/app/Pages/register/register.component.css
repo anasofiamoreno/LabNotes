@@ -10,12 +10,10 @@
 }
 
 .cFormLogin{
-
     min-width: 50%;
     background-color: #FBCFCF;
     border: 5px solid #000000;
     border-radius: 15px;
-    
 }
 
 .cFormLogin h2{
@@ -32,6 +30,10 @@
 .divBtn{
     text-align: center;
 
+}
+.divBtn button{
+    padding: 5px;
+    font-size: medium;
 }
 
 .cdivlogito{
@@ -57,7 +59,7 @@ font-size: 1.2em;
     box-sizing: border-box;
     border-radius: 5px;
     font-size: 120%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .cFormLogin button{
@@ -75,3 +77,11 @@ img{
   margin-right: 15px;
 }
 
+.cAlert{
+    color: Red;
+    font-weight: bold;
+    font-size: large;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
